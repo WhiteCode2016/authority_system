@@ -1,4 +1,4 @@
-package com.white.web.log;
+package com.white.entity;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import java.util.Date;
  * 错误日志实体类
  * Created by White on 2017/7/24.
  */
-public class LogInfo {
+public class SysLog {
     private String id;
     // 用户名
     private String userName;

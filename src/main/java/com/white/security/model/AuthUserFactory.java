@@ -1,10 +1,9 @@
 package com.white.security.model;
 
 
-import com.white.entity.SysMenu;
-import com.white.entity.SysRole;
-import com.white.entity.SysUser;
-import com.white.util.StringHelper;
+import com.white.entity.system.SysMenu;
+import com.white.entity.system.SysRole;
+import com.white.entity.system.SysUser;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package com.white.mapper;
 
-import com.white.entity.SysRole;
+import com.white.entity.system.SysRole;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -1,4 +1,6 @@
-package com.white.entity;
+package com.white.entity.system;
+
+import com.white.entity.common.DataEntity;
 
 import java.util.ArrayList;
 import java.util.List;

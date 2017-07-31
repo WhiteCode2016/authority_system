@@ -1,7 +1,8 @@
 package com.white.service.impl;
 
-import com.white.entity.SysMenu;
-import com.white.entity.SysUser;
+
+import com.white.entity.system.SysMenu;
+import com.white.entity.system.SysUser;
 import com.white.mapper.SysMenuMapper;
 import com.white.mapper.SysRoleMapper;
 import com.white.mapper.SysUserMapper;

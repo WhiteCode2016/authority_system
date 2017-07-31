@@ -1,6 +1,6 @@
 package com.white.security.model;
 
-import com.white.entity.SysMenu;
+import com.white.entity.system.SysMenu;
 import com.white.security.common.AbstractAuthUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

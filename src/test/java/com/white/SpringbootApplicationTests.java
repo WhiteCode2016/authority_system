@@ -1,20 +1,15 @@
 package com.white;
 
-import com.white.entity.SysUser;
 import com.white.mapper.SysMenuMapper;
 import com.white.mapper.SysRoleMapper;
 import com.white.mapper.SysUserMapper;
-import com.white.service.SystemService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

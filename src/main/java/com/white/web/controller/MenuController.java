@@ -2,7 +2,7 @@ package com.white.web.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.white.entity.SysMenu;
+import com.white.entity.system.SysMenu;
 import com.white.service.SystemService;
 import com.white.util.BootStrapPage;
 import org.springframework.beans.factory.annotation.Autowired;

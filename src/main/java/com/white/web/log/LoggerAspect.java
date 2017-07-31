@@ -1,5 +1,6 @@
 package com.white.web.log;
 
+import com.white.entity.SysLog;
 import com.white.security.model.AuthUser;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -7,7 +8,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -34,7 +33,7 @@ public class LoggerAspect {
     // 切入方法
     @AfterThrowing(pointcut = "controllerLog()",throwing = "e")
     public void afterThrowing(JoinPoint joinPoint, Throwable e){
-        LogInfo log = new LogInfo();
+        SysLog log = new SysLog();
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 
         AuthUser user =  (AuthUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();

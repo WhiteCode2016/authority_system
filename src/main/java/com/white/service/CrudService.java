@@ -1,7 +1,7 @@
 package com.white.service;
 
 import com.white.dao.CrudDao;
-import com.white.entity.DataEntity;
+import com.white.entity.common.DataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

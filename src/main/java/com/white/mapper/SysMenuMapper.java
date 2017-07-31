@@ -1,6 +1,6 @@
 package com.white.mapper;
 
-import com.white.entity.SysMenu;
+import com.white.entity.system.SysMenu;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

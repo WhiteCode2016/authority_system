@@ -1,7 +1,7 @@
 package com.white.mapper;
 
 import com.white.dao.CrudDao;
-import com.white.entity.SysUser;
+import com.white.entity.system.SysUser;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

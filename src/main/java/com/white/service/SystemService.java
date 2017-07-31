@@ -1,8 +1,9 @@
 package com.white.service;
 
 
-import com.white.entity.SysMenu;
-import com.white.entity.SysUser;
+
+import com.white.entity.system.SysMenu;
+import com.white.entity.system.SysUser;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.white.security;
 
-import com.white.entity.SysUser;
+import com.white.entity.system.SysUser;
 import com.white.security.model.AuthUser;
 import com.white.security.model.AuthUserFactory;
 import com.white.service.SystemService;

@@ -1,4 +1,4 @@
-package com.white.entity;
+package com.white.entity.common;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.white.util.StringHelper;

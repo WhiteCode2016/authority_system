@@ -18,7 +18,7 @@
     </sql>
 
     <!-- 通过userId获取用户的菜单列表 -->
-    <select id="getMenusByUserId" resultType="com.white.entity.SysMenu">
+    <select id="getMenusByUserId" resultType="com.white.entity.system.SysMenu">
         <include refid="selectColumns"/>
         JOIN sys_role_menu srm ON srm.menu_id = sm.id
         JOIN sys_role sr ON sr.id = srm.role_id
@@ -28,12 +28,12 @@
     </select>
 
     <!-- 获取所有的菜单列表 -->
-    <select id="getAllMenus" resultType="com.white.entity.SysMenu">
+    <select id="getAllMenus" resultType="com.white.entity.system.SysMenu">
         <include refid="selectColumns"/>
     </select>
 
     <!-- 根据菜单名查询菜单 -->
-    <select id="getMenuByMenuName" resultType="com.white.entity.SysMenu">
+    <select id="getMenuByMenuName" resultType="com.white.entity.system.SysMenu">
         <include refid="selectColumns"/>
         WHERE sm.menuName = #{menuName}
     </select>

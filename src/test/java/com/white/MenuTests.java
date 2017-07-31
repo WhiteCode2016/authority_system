@@ -1,7 +1,7 @@
 package com.white;
 
-import com.white.entity.SysMenu;
-import com.white.entity.SysUser;
+import com.white.entity.system.SysMenu;
+import com.white.entity.system.SysUser;
 import com.white.service.SystemService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
