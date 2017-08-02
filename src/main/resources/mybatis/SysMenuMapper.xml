@@ -37,4 +37,48 @@
         <include refid="selectColumns"/>
         WHERE sm.menuName = #{menuName}
     </select>
+
+    <!-- 获取所有的父级菜单 -->
+    <select id="getParentMenu" resultType="com.white.entity.system.SysMenu">
+        <include refid="selectColumns"/>
+        WHERE sm.parent_id = ''
+    </select>
+
+    <!-- 通过parentId获取其子级菜单 -->
+    <select id="getChildMenuByParentId" resultType="com.white.entity.system.SysMenu">
+        <include refid="selectColumns"/>
+        WHERE sm.parent_id = #{parentId}
+    </select>
+
+    <!-- 批量删除菜单 -->
+    <select id="deleteMenu" parameterType="java.lang.String" resultType="Integer">
+        DELETE FROM sys_menu WHERE id IN
+        <foreach collection="array" item="id" index="index" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <!-- 添加一个菜单 -->
+    <insert id="insert">
+        INSERT INTO sys_menu
+            (
+                id,
+                parent_id,
+                menuName,
+                href,
+                icon,
+                sort,
+                is_show,
+                remarks
+            ) VALUES (
+                #{id},
+                #{parentId},
+                #{menuName},
+                #{href},
+                #{icon},
+                #{sort},
+                #{isShow},
+                #{remarks}
+            )
+    </insert>
 </mapper>

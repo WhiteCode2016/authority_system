@@ -19,7 +19,7 @@
     <!-- 根据编号获取用户 -->
     <select id="get" resultType="com.white.entity.system.SysUser">
         <include refid="selectColumns" />
-        WHERE su.id = ${id}
+        WHERE su.id = #{id}
     </select>
 
     <!-- 根据登录名获取用户 -->

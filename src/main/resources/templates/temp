@@ -1,0 +1,37 @@
+ <!-- 全局css -->
+        <link rel="shortcut icon" th:href="@{/static/H_plus/favicon.ico}"/>
+        <link th:href="@{/static/H_plus/css/bootstrap.min.css?v=3.3.6}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/font-awesome.css?v=4.4.0}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/validate/bootstrapValidator.min.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/animate.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/style.css?v=4.1.0}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/_fstyle.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/iCheck/custom.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/webuploader/webuploader.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/ztree/zTreeStyle.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/jquery-treegrid/css/jquery.treegrid.css}" rel="stylesheet"/>
+
+        <!-- 全局js -->
+        <script th:src="@{/static/H_plus/js/jquery.min.js?v=2.1.4}"></script>
+        <script th:src="@{/static/H_plus/js/bootstrap.min.js?v=3.3.6}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/ztree/jquery.ztree.all.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/validate/bootstrapValidator.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/validate/zh_CN.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/jquery-treegrid/js/jquery.treegrid.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/jquery-treegrid/js/jquery.treegrid.bootstrap3.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/jquery-treegrid/extension/jquery.treegrid.extension.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/layer/layer.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/iCheck/icheck.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/layer/laydate/laydate.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/webuploader/webuploader.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/ajax-object.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/bootstrap-table-object.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/tree-table-object.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/web-upload-object.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/ztree-object.js}"></script>
+        <script th:src="@{/static/H_plus/js/common/Feng.js}"></script>
+        <script th:src="@{/static/H_plus/js/content.js?v=1.0.0}"></script>

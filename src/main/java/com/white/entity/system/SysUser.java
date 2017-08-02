@@ -17,6 +17,8 @@ public class SysUser extends DataEntity {
     private String username;
     // 密码
     private String password;
+    // 头像
+    private String icon;
     // 中文名
     private String userNameCn;
     // 英文名
@@ -52,6 +54,14 @@ public class SysUser extends DataEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public String getUserNameCn() {

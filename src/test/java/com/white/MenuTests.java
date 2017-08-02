@@ -58,6 +58,26 @@ public class MenuTests {
 
 	@Test
 	public void getMenuByMenuName() {
-		System.out.println(systemService.getMenuByMenuName("系统设置"));
+		System.out.println(systemService.getMenuByMenuName("系统管理"));
+	}
+
+	@Test
+	public void getParentMenu() {
+		System.out.println(systemService.getParentMenu());
+	}
+
+	@Test
+	public void getChildMenu() {
+		System.out.println(systemService.getChildMenuByParentId("2"));
+	}
+
+	@Test
+	public void insert() {
+		SysMenu sysMenu = new SysMenu();
+		sysMenu.setId("123");
+		sysMenu.setMenuName("qita");
+		sysMenu.setSort(3);
+		sysMenu.setRemarks("this is test");
+		System.out.println(systemService.addMenu(sysMenu));
 	}
 }

@@ -51,6 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity
                 .headers()
                 .frameOptions().disable();
+        httpSecurity.csrf().disable();
     }
 
     @Override
@@ -66,10 +67,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // 设置忽略的静态资源
         webSecurity
                 .ignoring()
-                .antMatchers("/static/**")
-                .antMatchers("/400")
-                .antMatchers("/404")
-                .antMatchers("/500");
+                .antMatchers("/static/**");
+//                .antMatchers("/400")
+//                .antMatchers("/404")
+//                .antMatchers("/500");
     }
 
     @Bean

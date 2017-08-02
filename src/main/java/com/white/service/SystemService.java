@@ -19,5 +19,17 @@ public interface SystemService {
     List<SysMenu> getAllMenus();
 
     // 根据菜单名查询
-    SysMenu getMenuByMenuName(String menuName);
+    List<SysMenu> getMenuByMenuName(String menuName);
+
+    // 获取所有的父级菜单
+    List<SysMenu> getParentMenu();
+
+    // 通过parentId获取其子级菜单
+    List<SysMenu> getChildMenuByParentId(String parentId);
+
+    // 批量删除菜单
+    void deleteMenu(String[] id);
+
+    int addMenu(SysMenu sysMenu);
+
 }

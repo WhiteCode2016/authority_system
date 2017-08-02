@@ -1,5 +1,6 @@
 package com.white.mapper;
 
+import com.white.dao.CrudDao;
 import com.white.entity.system.SysMenu;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by White on 2017/7/19.
  */
 @Mapper
-public interface SysMenuMapper {
+public interface SysMenuMapper extends CrudDao<SysMenu>{
 
     // 通过userId获取用户的菜单列表
     List<SysMenu> getMenusByUserId(String userId);
@@ -19,5 +20,15 @@ public interface SysMenuMapper {
     List<SysMenu> getAllMenus();
 
     // 根据菜单名查询
-    SysMenu getMenuByMenuName(String menuName);
+    List<SysMenu> getMenuByMenuName(String menuName);
+
+    // 获取所有的父级菜单
+    List<SysMenu> getParentMenu();
+
+    // 通过parentId获取其子级菜单
+    List<SysMenu> getChildMenuByParentId(String parentId);
+
+    // 批量删除菜单
+    void deleteMenu(String[] id);
+
 }

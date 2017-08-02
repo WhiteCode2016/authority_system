@@ -27,7 +27,8 @@ public class SpringbootApplicationTests {
 
 	@Test
 	public void sysUserMapperTest() {
-		System.out.println(sysUserMapper.getUserByUserName("admin"));
+//		System.out.println(sysUserMapper.getUserByUserName("admin"));
+		System.out.println(sysUserMapper.get("1"));
 //		SysUser sysUser = new SysUser();
 ////		sysUser.preInsert();
 ////		sysUser.setIsNewRecord(true);
@@ -48,6 +49,11 @@ public class SpringbootApplicationTests {
 	public void setSysMenuMapperTest() {
 //		System.out.println(sysMenuMapper.getMenusByUserId("1"));
 		System.out.println(sysMenuMapper.getAllMenus());
+	}
+
+	@Test
+	public void deleteMenu(){
+		sysMenuMapper.deleteMenu(new String[]{"50223b0d0c014e848296f7580df517e7"});
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.white.entity.system;
 
 import com.white.entity.common.DataEntity;
+import org.hibernate.validator.constraints.NotBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class SysMenu extends DataEntity {
     // 所有父级编号
     private String parentIds;
     // 名称
+    @NotBlank(message = "菜单名称必填")
     private String menuName;
     // 链接
     private String href;

@@ -3,10 +3,12 @@ package com.white.service.impl;
 
 import com.white.entity.system.SysMenu;
 import com.white.entity.system.SysUser;
+import com.white.enums.ResultEnum;
 import com.white.mapper.SysMenuMapper;
 import com.white.mapper.SysRoleMapper;
 import com.white.mapper.SysUserMapper;
 import com.white.service.SystemService;
+import com.white.web.exception.DefaultException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +66,28 @@ public class SystemServiceImpl implements SystemService {
     }
 
     @Override
-    public SysMenu getMenuByMenuName(String menuName) {
+    public  List<SysMenu> getMenuByMenuName(String menuName) {
         return sysMenuMapper.getMenuByMenuName(menuName);
     }
+
+    @Override
+    public  List<SysMenu> getParentMenu() {
+        return sysMenuMapper.getParentMenu();
+    }
+
+    @Override
+    public List<SysMenu> getChildMenuByParentId(String parentId) {
+        return sysMenuMapper.getChildMenuByParentId(parentId);
+    }
+
+    @Override
+    public void deleteMenu(String[] id) {
+        sysMenuMapper.deleteMenu(id);
+    }
+
+    @Override
+    public int addMenu(SysMenu sysMenu) {
+        return sysMenuMapper.insert(sysMenu);
+    }
+
 }

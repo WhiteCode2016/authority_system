@@ -17,8 +17,4 @@ public class AdminController {
         return "admin/default_index";
     }
 
-    @RequestMapping("/admin_info")
-    public String adminInfo() {
-        return "admin/user/user_view";
-    }
 }

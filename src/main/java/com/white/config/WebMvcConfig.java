@@ -18,7 +18,11 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         // 注册页
         registry.addViewController("/register").setViewName("register");
         // 后台主页
-        registry.addViewController("/admin/index").setViewName("/admin/index");
+        registry.addViewController("/admin/index").setViewName("admin/index");
+        // 菜单界面
+        registry.addViewController("/menu").setViewName("admin/menu/menu_view");
+        registry.addViewController("/menu/menu_add").setViewName("admin/menu/menu_add");
+
     }
 
     @Override
