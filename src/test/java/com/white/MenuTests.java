@@ -72,12 +72,16 @@ public class MenuTests {
 	}
 
 	@Test
+	public void deleteMenu() {
+		systemService.deleteMenu("923");
+	}
+
+	@Test
 	public void insert() {
 		SysMenu sysMenu = new SysMenu();
-		sysMenu.setId("123");
-		sysMenu.setMenuName("qita");
+		sysMenu.setId("12345");
+		sysMenu.setMenuName("test");
 		sysMenu.setSort(3);
-		sysMenu.setRemarks("this is test");
-		System.out.println(systemService.addMenu(sysMenu));
+		systemService.addMenu(sysMenu);
 	}
 }

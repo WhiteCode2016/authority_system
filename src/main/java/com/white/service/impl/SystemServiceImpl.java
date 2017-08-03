@@ -61,6 +61,31 @@ public class SystemServiceImpl implements SystemService {
     }
 
     @Override
+    public List<SysUser> getAllUsers() {
+        return sysUserMapper.findAllList();
+    }
+
+    @Override
+    public SysUser getUser(String id) {
+        return sysUserMapper.get(id);
+    }
+
+    @Override
+    public void addUser(SysUser sysUser) {
+        sysUserMapper.insert(sysUser);
+    }
+
+    @Override
+    public void updateUser(SysUser sysUser) {
+        sysUserMapper.update(sysUser);
+    }
+
+    @Override
+    public void deleteUser(String id) {
+        sysUserMapper.deleteById(id);
+    }
+
+    @Override
     public List<SysMenu> getAllMenus() {
         return sysMenuMapper.getAllMenus();
     }
@@ -86,8 +111,26 @@ public class SystemServiceImpl implements SystemService {
     }
 
     @Override
-    public int addMenu(SysMenu sysMenu) {
-        return sysMenuMapper.insert(sysMenu);
+    public void deleteMenu(String id) {
+        sysMenuMapper.deleteById(id);
+    }
+
+    @Override
+    public void addMenu(SysMenu sysMenu) {
+        if (sysMenu.getMenuName() == null || sysMenu.getMenuName().equals("")) {
+            throw new DefaultException(ResultEnum.MENU_NAME);
+        }
+        sysMenuMapper.insert(sysMenu);
+    }
+
+    @Override
+    public void update(SysMenu sysMenu) {
+        sysMenuMapper.update(sysMenu);
+    }
+
+    @Override
+    public SysMenu getMenu(String id) {
+        return sysMenuMapper.get(id);
     }
 
 }

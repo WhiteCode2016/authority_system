@@ -3,6 +3,8 @@ package com.white.entity.system;
 import com.white.entity.common.DataEntity;
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Null;
 import java.util.ArrayList;
 import java.util.List;
 

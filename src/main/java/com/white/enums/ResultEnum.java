@@ -7,6 +7,7 @@ public enum ResultEnum {
     UNKONW_ERROR(-1, "未知错误"),
     SUCCESS(0, "成功"),
     ERROR(1, "失败"),
+    MENU_NAME(800, "菜单名必填"),
     ;
 
     private Integer code;
