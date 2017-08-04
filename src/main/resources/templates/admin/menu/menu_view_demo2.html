@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html layout:decorate="~{/test}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>菜单管理</title>
-        <link rel="stylesheet" th:href="@{/static/H_plus/css/plugins/bootstrap-table/bootstrap-table.min.css}"/>
-        <link rel="stylesheet" th:href="@{/static/H_plus/css/plugins/iCheck/custom.css}"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="renderer" content="webkit"/><!-- 让360浏览器默认选择webkit内核 -->
+
+        <!-- 全局css -->
+        <link rel="shortcut icon" th:href="@{/static/H_plus/favicon.ico}"/>
+        <link rel="stylesheet" th:href="@{/static/H_plus/css/bootstrap.min14ed.css?v=3.3.6}" />
+        <link rel="stylesheet" th:href="@{/static/H_plus/css/font-awesome.min93e3.css?v=4.4.0}" />
+        <link rel="stylesheet" th:href="@{/static/H_plus/css/animate.min.css}" />
+        <link rel="stylesheet" th:href="@{/static/H_plus/css/style.min862f.css?v=4.1.0}" />
+        <link th:href="@{/static/H_plus/css/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
+        <link th:href="@{/static/H_plus/css/plugins/iCheck/custom.css}" rel="stylesheet"/>
     </head>
     <body class="gray-bg">
-        <div layout:fragment="content">
+        <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="ibox float-e-margins">
@@ -35,7 +44,15 @@
                 </div>
             </div>
         </div>
-        <script th:src="@{/static/system/menu/menu.js}"></script>
+        <!-- 全局js -->
+        <script th:src="@{/static/H_plus/js/jquery.min.js?v=2.1.4}"></script>
+        <script th:src="@{/static/H_plus/js/bootstrap.min.js?v=3.3.6}"></script>
+        <script th:src="@{/static/H_plus/js/content.min.js?v=1.0.0}"></script>
 
+        <script th:src="@{/static/H_plus/js/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/layer/layer.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/iCheck/icheck.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/layer/laydate/laydate.js}"></script>
+        <script th:src="@{/static/system/menu/menu.js}"></script>
     </body>
 </html>
