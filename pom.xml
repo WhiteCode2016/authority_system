@@ -23,7 +23,7 @@
 		<!-- 1.5.4 默认使用thmeleaf 2.1,若使用thymeleaf 3，只需添加下面两行 -->
 		<!-- thymeleaf-extras-springsecurity4:3.0.2.RELEASE 要求 Thymeleaf 3.0.3+ -->
 		<thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
-		<thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+		<thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
 	</properties>
 
 	<dependencies>

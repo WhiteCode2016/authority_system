@@ -36,6 +36,7 @@
     <select id="getMenuByMenuName" resultType="com.white.entity.system.SysMenu">
         <include refid="selectColumns"/>
         WHERE sm.menuName = #{menuName}
+       /* WHERE sm.menuName LIKE '%${menuName}%'*/
     </select>
 
     <!-- 获取所有的父级菜单 -->

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html layout:decorate="~{/test}">
+<html th:replace="admin/temp :: temp(~{::title},~{::link},~{::div},~{::script})">
     <head>
         <title>菜单管理</title>
+        <!-- 其他CSS -->
         <link rel="stylesheet" th:href="@{/static/H_plus/css/plugins/bootstrap-table/bootstrap-table.min.css}"/>
-        <link rel="stylesheet" th:href="@{/static/H_plus/css/plugins/iCheck/custom.css}"/>
     </head>
     <body class="gray-bg">
-        <div layout:fragment="content">
+        <div class="wrapper wrapper-content">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="ibox float-e-margins">
@@ -23,7 +23,7 @@
                                         <div class="col-sm-6">
                                             <div class="input-group">
                                                 <input type="text" placeholder="请输入菜单名称" class="input-sm form-control" id="menuName"> <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-sm btn-primary" id="query"><i class="glyphicon glyphicon-search"></i> 搜索</button> </span>
+                                                        <button type="button" class="btn btn-sm btn-primary" id="query"><i class="glyphicon glyphicon-search"></i> 搜索</button> </span>
                                             </div>
                                         </div>
                                     </div>
@@ -35,7 +35,10 @@
                 </div>
             </div>
         </div>
+        <!-- 其他JS -->
+        <script th:src="@{/static/H_plus/js/plugins/layer/layer.min.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/layer/laydate/laydate.js}"></script>
+        <script th:src="@{/static/H_plus/js/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
         <script th:src="@{/static/system/menu/menu.js}"></script>
-
     </body>
 </html>

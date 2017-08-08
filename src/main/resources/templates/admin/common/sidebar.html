@@ -1,55 +1,61 @@
-<nav class="navbar-default navbar-static-side" role="navigation" th:fragment="common_sidebar">
-    <div class="nav-close"><i class="fa fa-times-circle"></i>
-    </div>
-    <div class="sidebar-collapse">
-        <ul class="nav" id="side-menu">
-            <li class="nav-header">
-                <div class="dropdown profile-element">
-                    <span><img alt="image" class="img-circle" src="http://orheaidcn.bkt.clouddn.com/profile_small.jpg"/></span>
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <span class="clear">
-                            <!-- 登录名 -->
-                            <span class="block m-t-xs">
-                                <strong class="font-bold">
-                                    <span sec:authentication="name"></span>
-                                </strong>
-                            </span>
-                            <!-- 中文名 -->
-                            <span class="text-muted text-xs block">
-                                <span sec:authentication="principal.userNameCn"></span>
-                                <b class="caret"></b>
-                            </span>
-                        </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a class="J_menuItem" th:href="@{/admin/admin_info}">个人资料</a></li>
-                        <li><a class="J_menuItem" th:href="@{/menu}">菜单管理</a></li>
-                        <li><a class="J_menuItem" href="#">修改密码</a></li>
-                        <li class="divider"></li>
-                        <li><a href="@{/logout}">安全退出</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="logo-element">Mx
-                </div>
-            </li>
-            <!-- 菜单 -->
-            <li th:if="${!#authentication.principal.menus.empty}"
-                th:each= "menu : ${#authentication.principal.menus}">
-                <a th:href="${menu.href}">
-                    <i th:class="${menu.icon}"></i>
-                    <span class="nav-label" th:text="${menu.menuName}">首页</span>
-                    <!-- 如果没有子菜单，就隐藏下拉按钮 -->
-                    <span class="fa arrow" th:if="${!menu.children.empty}"></span>
-                </a>
-                <ul class="nav nav-second-level">
-                    <li th:each="menuChid : ${menu.children}">
-                        <a class="J_menuItem" th:href="${menuChid.href}" data-index="0">
-                            <span th:text="${menuChid.menuName}"></span>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <!-- 侧边菜单栏 -->
+        <nav class="navbar-default navbar-static-side" role="navigation" th:fragment="common_sidebar">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span><img alt="image" class="img-circle" src="http://orheaidcn.bkt.clouddn.com/profile_small.jpg"/></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <!-- 登录名 -->
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">
+                                            <span sec:authentication="name"></span>
+                                        </strong>
+                                    </span>
+                                    <!-- 中文名 -->
+                                    <span class="text-muted text-xs block">
+                                        <span sec:authentication="principal.userNameCn"></span>
+                                        <b class="caret"></b>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" th:href="@{/admin/admin_info}">个人资料</a></li>
+                                <li><a class="J_menuItem" th:href="@{/menu}">菜单管理</a></li>
+                                <li><a class="J_menuItem" href="#">修改密码</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@{/logout}">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">Mx
+                        </div>
+                    </li>
+                    <!-- 菜单 -->
+                    <li th:if="${!#authentication.principal.menus.empty}"
+                        th:each= "menu : ${#authentication.principal.menus}">
+                        <a th:href="${menu.href}">
+                            <i th:class="${menu.icon}"></i>
+                            <span class="nav-label" th:text="${menu.menuName}">首页</span>
+                            <!-- 如果没有子菜单，就隐藏下拉按钮 -->
+                            <span class="fa arrow" th:if="${!menu.children.empty}"></span>
                         </a>
+                        <ul class="nav nav-second-level">
+                            <li th:each="menuChid : ${menu.children}">
+                                <a class="J_menuItem" th:href="${menuChid.href}" data-index="0">
+                                    <span th:text="${menuChid.menuName}"></span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+            </div>
+        </nav>
+    </body>
+</html>
